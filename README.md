@@ -32,3 +32,4 @@
 - Ensure that the implementation follows object-oriented design principles and promotes loose coupling between the news agency and subscribers. <br>
 
 ## UML Class Diagram
+![Real-time News Subscription Service](https://github.com/user-attachments/assets/1077dc92-240e-4a07-b634-0a2591ba2df7)

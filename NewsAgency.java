@@ -2,7 +2,7 @@ import java.util.*;
 
 public class NewsAgency implements NewsSubject {
 
-    private List<SubscriberObserver> subscriberList;
+    private List<Subscriber> subscriberList;
 
     public NewsAgency() {
         this.subscriberList = new ArrayList<>();

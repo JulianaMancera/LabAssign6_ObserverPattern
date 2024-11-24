@@ -1,32 +1,28 @@
 import java.util.*;
 
 public class NewsAgency implements NewsSubject {
-    
-    private List<Subscriber> subscribers;
 
-    public NewsAgency(){
-        this.subscribers = new ArrayList<>();
+    private List<SubscriberObserver> subscriberList;
+
+    public NewsAgency() {
+        this.subscriberList = new ArrayList<>();
     }
 
-    //add a subscriber
     @Override
-    public void attach(Subscriber subscriber){
-        subscribers.add(subscriber);
+    public void attach(Subscriber subscriber) {
+        subscriberList.add(subscriber);
         System.out.println(subscriber.getSubscriberName() + " has subscribed.");
-
     }
 
-    //remove a subscriber
     @Override
-    public void detach(Subscriber subscriber){
-        subscribers.remove(subscriber);
+    public void detach(Subscriber subscriber) {
+        subscriberList.remove(subscriber);
         System.out.println("\n" + subscriber.getSubscriberName() + " has unsubscribed.");
     }
-   
+
     @Override
-    //notifying news
-    public void notifying(String news){     
-        for (Subscriber subscriber : subscribers){
+    public void notifying(String news) {
+        for (SubscriberObserver subscriber : subscriberList) {
             subscriber.updateNews(news);
         }
     }
